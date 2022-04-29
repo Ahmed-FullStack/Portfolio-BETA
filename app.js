@@ -7,4 +7,4 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/html/index.html')
 })
 
-app.listen(3000)
+app.listen(3000 || process.env.Port)
