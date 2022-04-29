@@ -7,4 +7,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/html/index.html')
 })
 
-app.listen(process.env.PORT)
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000
+}
+app.listen(port)
